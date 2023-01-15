@@ -1,0 +1,550 @@
+/* IMPORTACIONES */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway&display=swap');
+
+/* GENERALES */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+body{
+    height: 1320px;
+}
+/* HEADER */
+header {
+    background-color: rgb(0,0,0);
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#contenedorHeader{
+    width: 66%;
+    height: 100%;
+    /* Propiedades del Grid */
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 0.8fr repeat(3, 1fr) 0.8fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+/* Logotipo del Portafolio */
+#contenedorHeader > div{
+    background: #000000 url(../IMG/logo.png) center center/contain no-repeat;
+    /* Propiedades del Grid */
+    grid-area: 2 / 2 / 5 / 5;
+}
+/* Navigator */
+#contenedorHeader > nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Propiedades del Grid */
+    grid-area: 2 / 6 / 5 / 12;
+}
+#contenedorHeader > nav > ul{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#contenedorHeader > nav > ul > li{
+    color: white;
+    padding-right: 3%;
+    padding-left: 3%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border-radius: 3px;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: all 1s 0.3s ease-in, all 0.7s 0s ease-out;
+    cursor: pointer;
+}
+#contenedorHeader > nav > ul > li:hover{
+    background-color: #f27e17;
+    transform: scale(1.05);
+}
+
+/* MAIN */
+main {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Contenedor de imágenes de portafolio */
+#contenedorImagenes{
+    width: 66%;
+    height: 100%;
+    /* Propiedades del Grid */
+    display: grid;
+    grid-template-columns: 15% repeat(3, 1fr) 15%;
+    grid-template-rows: 2% repeat(5, 1fr) 7%;
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+}
+/* Imágenes del portafolio */
+#contenedorImagenes > div:nth-child(1) {
+    /* Propiedades del Grid */
+    grid-area: 2 / 2 / 3 / 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#contenedorImagenes > div:nth-child(1) > h1{
+    font-size: 3em;
+    padding-bottom: 5%;
+    padding-top: 4%;
+    width: 100%;
+    text-align: center;
+    border-bottom: 2px solid #b0bec5;
+    font-family: 'Playfair Display', serif;
+    color: #F57F17;
+}
+/* 1ERA IMG */
+#contenedorImagenes > div:nth-child(2) {
+    background: #000000 url(../IMG/fighterPlane1.jpg) center center/cover no-repeat;
+    /* Propiedades del Grid */
+    grid-area: 3 / 2 / 4 / 3;
+    transition: all 1s 0.3s ease-in, all 0.7s 0s ease-out;
+    position:relative;
+    cursor: pointer;
+}
+#contenedorImagenes > div:nth-child(2)::before{
+    position:absolute;
+    content:"";
+    height:100%;
+    width:100%;
+    transition: all 1s 0.3s ease-in, all 0.7s 0s ease-out;
+    background: rgb(245,127,23);
+    opacity: 0;
+}
+#contenedorImagenes > div:nth-child(2):hover{
+    transform: scale(1.10);
+}
+#contenedorImagenes > div:nth-child(2):hover::before{
+    opacity: 0.5;
+}
+/* 2DA IMG */
+#contenedorImagenes > div:nth-child(3) {
+    background: #000000 url(../IMG/fighterPlane2.jpg) center center/cover no-repeat;
+    /* Propiedades del Grid */
+    grid-area: 3 / 3 / 6 / 4;
+    transition: all 1s 0.3s ease-in, all 0.7s 0s ease-out;
+    position:relative;
+    z-index: 100;
+    cursor: pointer;
+}
+#contenedorImagenes > div:nth-child(3)::before{
+    position:absolute;
+    content:"";
+    height:100%;
+    width:100%;
+    transition: all 1s 0.3s ease-in, all 0.7s 0s ease-out;
+    background: rgb(245,127,23);
+    opacity: 0;
+}
+#contenedorImagenes > div:nth-child(3):hover{
+    transform: scale(1.10);
+}
+#contenedorImagenes > div:nth-child(3):hover::before{
+    opacity: 0.5;
+}
+/* 3RA IMG */
+#contenedorImagenes > div:nth-child(4) {
+    background: #000000 url(../IMG/fighterPlane3.jpg) center center/cover no-repeat;
+    /* Propiedades del Grid */
+    grid-area: 3 / 4 / 4 / 5;
+    transition: all 1s 0.3s ease-in, all 0.7s 0s ease-out;
+    position:relative;
+    cursor: pointer;
+}
+#contenedorImagenes > div:nth-child(4)::before{
+    position:absolute;
+    content:"";
+    height:100%;
+    width:100%;
+    transition: all 1s 0.3s ease-in, all 0.7s 0s ease-out;
+    background: rgb(245,127,23);
+    opacity: 0;
+}
+#contenedorImagenes > div:nth-child(4):hover{
+    transform: scale(1.10);
+}
+#contenedorImagenes > div:nth-child(4):hover::before{
+    opacity: 0.5;
+}
+/* 4TA IMG */
+#contenedorImagenes > div:nth-child(5) {
+    background: #000000 url(../IMG/fighterPlane4.jpg) center center/cover no-repeat;
+    /* Propiedades del Grid */
+    grid-area: 4 / 2 / 5 / 3;
+    transition: all 1s 0.3s ease-in, all 0.7s 0s ease-out;
+    position:relative;
+    cursor: pointer;
+}
+#contenedorImagenes > div:nth-child(5)::before{
+    position:absolute;
+    content:"";
+    height:100%;
+    width:100%;
+    transition: all 1s 0.3s ease-in, all 0.7s 0s ease-out;
+    background: rgb(245,127,23);
+    opacity: 0;
+}
+#contenedorImagenes > div:nth-child(5):hover{
+    transform: scale(1.10);
+}
+#contenedorImagenes > div:nth-child(5):hover::before{
+    opacity: 0.5;
+}
+/* 5TA IMG */
+#contenedorImagenes > div:nth-child(6) {
+    background: #000000 url(../IMG/fighterPlane5.jpg) center center/cover no-repeat;
+    /* Propiedades del Grid */
+    grid-area: 4 / 4 / 5 / 5;
+    transition: all 1s 0.3s ease-in, all 0.7s 0s ease-out;
+    position:relative;
+    cursor: pointer;
+}
+#contenedorImagenes > div:nth-child(6)::before{
+    position:absolute;
+    content:"";
+    height:100%;
+    width:100%;
+    transition: all 1s 0.3s ease-in, all 0.7s 0s ease-out;
+    background: rgb(245,127,23);
+    opacity: 0;
+}
+#contenedorImagenes > div:nth-child(6):hover{
+    transform: scale(1.10);
+}
+#contenedorImagenes > div:nth-child(6):hover::before{
+    opacity: 0.5;
+}
+/* 6TA IMG */
+#contenedorImagenes > div:nth-child(7) {
+    background: #000000 url(../IMG/fighterPlane6.jpg) center center/cover no-repeat;
+    /* Propiedades del Grid */
+    grid-area: 5 / 2 / 6 / 3;
+    transition: all 1s 0.3s ease-in, all 0.7s 0s ease-out;
+    position:relative;
+    cursor: pointer;
+}
+#contenedorImagenes > div:nth-child(7)::before{
+    position:absolute;
+    content:"";
+    height:100%;
+    width:100%;
+    transition: all 1s 0.3s ease-in, all 0.7s 0s ease-out;
+    background: rgb(245,127,23);
+    opacity: 0;
+}
+#contenedorImagenes > div:nth-child(7):hover{
+    transform: scale(1.15);
+}
+#contenedorImagenes > div:nth-child(7):hover::before{
+    opacity: 0.5;
+}
+/* 7MA IMG */
+#contenedorImagenes > div:nth-child(8) {
+    background: #000000 url(../IMG/fighterPlane8.jpg) center center/cover no-repeat;
+    /* Propiedades del Grid */
+    grid-area: 5 / 4 / 6 / 5;
+    transition: all 1s 0.3s ease-in, all 0.7s 0s ease-out;
+    position:relative;
+    cursor: pointer;
+}
+#contenedorImagenes > div:nth-child(8)::before{
+    position:absolute;
+    content:"";
+    height:100%;
+    width:100%;
+    transition: all 1s 0.3s ease-in, all 0.7s 0s ease-out;
+    background: rgb(245,127,23);
+    opacity: 0;
+}
+#contenedorImagenes > div:nth-child(8):hover{
+    transform: scale(1.10);
+}
+#contenedorImagenes > div:nth-child(8):hover::before{
+    opacity: 0.5;
+}
+/* 8VA IMG */
+#contenedorImagenes > div:nth-child(9) {
+    background: #000000 url(../IMG/fighterPlane7.jpg) center center/cover no-repeat;
+    /* Propiedades del Grid */
+    grid-area: 6 / 2 / 7 / 4;
+    transition: all 1s 0.3s ease-in, all 0.7s 0s ease-out;
+    position:relative;
+    z-index: 100;
+    cursor: pointer;
+}
+#contenedorImagenes > div:nth-child(9)::before{
+    position:absolute;
+    content:"";
+    height:100%;
+    width:100%;
+    transition: all 1s 0.3s ease-in, all 0.7s 0s ease-out;
+    background: rgb(245,127,23);
+    opacity: 0;
+}
+#contenedorImagenes > div:nth-child(9):hover{
+    transform: scale(1.10);
+}
+#contenedorImagenes > div:nth-child(9):hover::before{
+    opacity: 0.5;
+}
+/* 9NA IMG */
+#contenedorImagenes > div:nth-child(10) {
+    background: #000000 url(../IMG/fighterPlane9.jpg) center center/cover no-repeat;
+    /* Propiedades del Grid */
+    grid-area: 6 / 4 / 7 / 5;
+    transition: all 1s 0.3s ease-in, all 0.7s 0s ease-out;
+    position:relative;
+    cursor: pointer;
+}
+#contenedorImagenes > div:nth-child(10)::before{
+    position:absolute;
+    content:"";
+    height:100%;
+    width:100%;
+    transition: all 1s 0.3s ease-in, all 0.7s 0s ease-out;
+    background: rgb(245,127,23);
+    opacity: 0;
+}
+#contenedorImagenes > div:nth-child(10):hover{
+    transform: scale(1.10);
+}
+#contenedorImagenes > div:nth-child(10):hover::before{
+    opacity: 0.5;
+}
+
+/* FOOTER */
+footer{
+    background-color: rgb(0,0,0);
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#contenedorFooter {
+    width: 66%;
+    height: 100%;
+    /* Propiedades del Grid */
+    display: grid;
+    grid-template-columns: 0.4fr repeat(10, 1fr) 0.4fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+#contenedorFooter > div:nth-child(1){
+    /* Propiedades del Grid */
+    grid-area: 2 / 2 / 3 / 4;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+#contenedorFooter > div:nth-child(1) > h3{
+    margin-right: 2%;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #c96814;
+}
+#contenedorFooter > div:nth-child(2){
+    /* Propiedades del Grid */
+    grid-area: 2 / 4 / 3 / 8;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+#contenedorFooter > div:nth-child(2) > p{
+    margin-left: 2%;
+    color: white;
+}
+/* Logo Facebook */
+#contenedorFooter > div:nth-child(3){
+    background: #000000 url(../IMG/facebook.png) center center/auto no-repeat;
+    /* Propiedades del Grid */
+    grid-area: 2 / 9 / 3 / 10;
+    cursor: pointer;
+}
+/* Logo Twitter */
+#contenedorFooter > div:nth-child(4){
+    background: #000000 url(../IMG/twitter.png) center center/auto no-repeat;
+    /* Propiedades del Grid */
+    grid-area: 2 / 10 / 3 / 11;
+    cursor: pointer;
+}
+/* Logo Google + */
+#contenedorFooter > div:nth-child(5){
+    background: #000000 url(../IMG/google-plus.png) center center/auto no-repeat;
+    /* Propiedades del Grid */
+    grid-area: 2 / 11 / 3 / 12;
+    cursor: pointer;
+}
+
+/* -------------------------------------------------------- MEDIA QUERYS */
+/* Vista horizontal (landscape) entre 724px y 1024px */
+@media screen and (max-width: 1024px) and (min-width: 724px){
+    body{
+        /* height: 1320px; */
+        height: 100vh;
+    }
+    /* HEADER */
+    #contenedorHeader{
+        width: 100%;
+    }
+    #contenedorHeader > nav > ul > li{
+        font-size: small;
+    }
+    /* MAIN */
+    /* Contenedor de imágenes de portafolio */
+    #contenedorImagenes {
+        width: 100%;
+    }
+    /* FOOTER */
+    #contenedorFooter {
+        width: 100%;
+    }
+
+}
+
+/* Media queries para la vista movil */
+@media screen and (max-width: 723px){
+    body{
+        /* height: 1320px; */
+        height: 100vh;
+    }
+    /* HEADER */
+    header {
+        height: 44%;
+    }
+    #contenedorHeader{
+        width: 100%;
+        /* Propiedades del Grid */
+        display: grid;
+        grid-template-columns: 0.3fr 1fr 0.3fr;
+        grid-template-rows: 0.3fr 1.8fr 3fr 0.3fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+    /* Logotipo del Portafolio */
+    #contenedorHeader > div {
+        /* Propiedades del Grid */
+        grid-area: 2 / 2 / 3 / 3;
+    }
+    /* Navigator */
+    #contenedorHeader > nav {
+        /* Propiedades del Grid */
+        grid-area: 3 / 2 / 4 / 3;
+    }
+    #contenedorHeader > nav > ul{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    #contenedorHeader > nav > ul > li{
+        font-size: small;
+        display: flex;
+    }
+    
+    /* MAIN */
+    main {
+        height: 385%;
+    }
+    /* Contenedor de imágenes de portafolio */
+    #contenedorImagenes {
+        width: 100%;
+        /* Propiedades del Grid */
+        display: grid;
+    grid-template-columns: 0.2fr 1fr 0.2fr;
+    grid-template-rows: 0.1fr repeat(2, 1fr) 3fr repeat(7, 1fr) 0.1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 10px;
+    }
+    /* Imágenes del portafolio */
+    #contenedorImagenes > div:nth-child(1) {
+        /* Propiedades del Grid */
+        grid-area: 2 / 2 / 3 / 3;
+    }
+    #contenedorImagenes > div:nth-child(2) {
+        /* Propiedades del Grid */
+        grid-area: 3 / 2 / 4 / 3;
+    }
+    #contenedorImagenes > div:nth-child(3) {
+        /* Propiedades del Grid */
+        grid-area: 4 / 2 / 5 / 3;
+    }
+    #contenedorImagenes > div:nth-child(4) {
+        /* Propiedades del Grid */
+        grid-area: 5 / 2 / 6 / 3;
+    }
+    #contenedorImagenes > div:nth-child(5) {
+        /* Propiedades del Grid */
+        grid-area: 6 / 2 / 7 / 3;
+    }
+    #contenedorImagenes > div:nth-child(6) {
+        /* Propiedades del Grid */
+        grid-area: 7 / 2 / 8 / 3;
+    }
+    #contenedorImagenes > div:nth-child(7) {
+        /* Propiedades del Grid */
+        grid-area: 8 / 2 / 9 / 3;
+    }
+    #contenedorImagenes > div:nth-child(8) {
+        /* Propiedades del Grid */
+        grid-area: 9 / 2 / 10 / 3;
+    }
+    #contenedorImagenes > div:nth-child(9) {
+        /* Propiedades del Grid */
+        grid-area: 10 / 2 / 11 / 3;
+    }
+    #contenedorImagenes > div:nth-child(10) {
+        /* Propiedades del Grid */
+        grid-area: 11 / 2 / 12 / 3;
+    }
+    
+    /* FOOTER */
+    footer{
+        height: 22%;
+    }
+    #contenedorFooter {
+        width: 100%;
+        /* Propiedades del Grid */
+        display: grid;
+        grid-template-columns: 0.6fr repeat(3, 1fr) 0.6fr;
+        grid-template-rows: 0.6fr repeat(2, 1fr) 0.4fr 1.6fr 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+    #contenedorFooter > div:nth-child(1){
+        /* Propiedades del Grid */
+        grid-area: 2 / 2 / 3 / 5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #contenedorFooter > div:nth-child(2){
+        /* Propiedades del Grid */
+        grid-area: 3 / 2 / 4 / 5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #contenedorFooter > div:nth-child(3){
+        /* Propiedades del Grid */
+        grid-area: 5 / 2 / 6 / 3;
+    }
+    #contenedorFooter > div:nth-child(4){
+        /* Propiedades del Grid */
+        grid-area: 5 / 3 / 6 / 4;
+    }
+    #contenedorFooter > div:nth-child(5){
+        /* Propiedades del Grid */
+        grid-area: 5 / 4 / 6 / 5;
+    }
+}
