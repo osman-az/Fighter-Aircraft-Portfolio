@@ -2,7 +2,7 @@
 
 ![Fighter-Aircraft-Portfolio](./IMG/forREADME/p9-card.png "Fighter-Aircraft-Portfolio")
 
-Web mockup,** CSS GRID functions, flexbox, media query** rules to set *breakpoints*.
+Web mockup,**CSS GRID functions, flexbox, media query** rules to set *breakpoints*.
 
 ## Characteristics:
 
