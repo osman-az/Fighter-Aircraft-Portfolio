@@ -15,3 +15,8 @@ Web mockup,** CSS GRID functions, flexbox, media query** rules to set *breakpoin
 4. **Media Queries** were set for the *mobile view.*
 
 5. When you mouse over any of the portfolio images, they display a transparent background as shown in the attached image.
+
+### Technologies:
+                    
+| ![HTML 5](https://i.imgur.com/QmbHEsR.png "HTML 5") HTML 5 | ![CSS 3](https://i.imgur.com/O6lJ8iB.png "CSS 3") CSS 3
+| ------------- | ------------- |
